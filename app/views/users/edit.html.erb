@@ -1,0 +1,12 @@
+<div class="container">
+<h2>User info</h2>
+<%= form_with model:@user, local:true do |f| %>
+  <p>Name</p>
+  <%= f.text_field :name, autofocus: true, placeholder:"名前"%>
+  <p>Image</p>
+  <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
+  <p>Introduction</p>
+  <%= f.text_area :introduction, placeholder:"introduction" %>
+  <%= f.submit "Update User" %>
+<% end %>
+</div>
